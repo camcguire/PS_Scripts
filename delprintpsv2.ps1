@@ -2,7 +2,7 @@
 $printers = Get-WMIObject -Class Win32_Printer | Select Name,PortName
 
 # Load printers to keep
-$tokeep = Import-CSV D:\Scripts\testprintershit.csv -Header ('Name','PortName')
+$tokeep = Import-CSV CHANGEME!!! -Header ('Name','PortName')
 
 # Set printers to be deleted
 $todelete = Compare-Object $printers $tokeep -Property Name
